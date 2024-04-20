@@ -1,0 +1,151 @@
+@import url('https://fonts.google.com/specimen/Kumbh+Sans');
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+:root{
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --Orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+}
+
+
+/*Nav.js*/
+.header{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    height: 5rem;
+    border-bottom: 1px solid var(--Light-grayish-blue);
+}
+.catalog{
+    display: flex;
+    justify-content: space-between;
+    color: var(--Dark-grayish-blue);
+    width: 25rem;
+    
+}
+.big{
+    font-weight: 600;
+}
+@media (max-width:600px){
+    .catalog{
+        display: none;
+    }
+
+}   
+/*Body.js*/
+body{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    width: 80%;
+    align-items: center;
+}
+.container .images{
+    display: flex;
+    flex-direction: column;
+    display: none;
+    width: 50%;
+    
+}
+.container .images .bottom{
+    margin-top: 1rem;
+    width: 25rem;
+}
+.container .images .bottom img{
+    border-radius: 1rem;
+}
+.container span .top img{
+    width: 25rem;
+    border-radius: 1rem;
+}
+.container span .bottom{
+    display: flex;
+    justify-content: space-between;
+}
+.container span .bottom img{
+    width: 5rem;
+}
+
+.container .text h3{
+    color:var(--Orange);
+    font-size: 0.8rem;
+}
+.container .text h1{
+    font-size: 2rem;
+    width: 19rem;
+    margin-top: 0.5rem;
+}
+.container .text h6{
+    margin-top: 1rem;
+    font-weight: 100;
+    color:var(--Dark-grayish-blue);
+    width: 25rem;
+}
+
+.container .text .price .top{
+    display: flex;
+    margin-top: 1rem;
+    width: 11rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .text .price .top .orange{
+    width: 2rem;
+    background: var(--Pale-orange);
+    color: var(--Orange);
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 8px 0 8px;
+    font-weight: 600;
+}
+.container .text .price .top h2{
+    font-size: 2rem;
+}
+.container .text .price h5{
+    margin-top: 0.5rem;
+    font-weight: 100;
+    color:var(--Dark-grayish-blue);
+}
+@media (max-width:600px){
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .container span .top img{
+        width: 100vw;
+        
+    }
+
+}  
+
+
+
+/*Buttons.js*/
+
+/*App.js*/
+.App{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
