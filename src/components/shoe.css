@@ -56,13 +56,13 @@ body{
 }
 .container{
     display: flex;
-    width: 80%;
+    width: 70%;
     align-items: center;
 }
 .container .images{
     display: flex;
     flex-direction: column;
-    display: none;
+    
     width: 50%;
     
 }
@@ -142,7 +142,41 @@ body{
 
 
 /*Buttons.js*/
-
+.buttons{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.buttons .right{
+    display: flex;
+    background: var(--Orange);
+    color:white;
+    width: 65%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    box-shadow: 0 2px 10px rgba(255,128,0);
+    cursor: pointer;
+}
+.buttons .left{
+    background: var(--Light-grayish-blue);
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttons .left button{
+    border: none;
+    color:var(--Orange);
+    font-weight: 600;
+    font-size: 2rem;
+    padding:1px;
+    cursor: pointer;
+}
 /*App.js*/
 .App{
     display: flex;
