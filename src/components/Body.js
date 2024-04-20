@@ -5,15 +5,14 @@ import LittleShoe3 from './images/image-product-4.jpg'
 import VeryBigShoe from './images/image-product-1.jpg'
 import Buttons from './Buttons'
 import { useState } from 'react'
-import { useEffect } from 'react'
+
 const Body = () => {
   const [image,setImage] = useState(VeryBigShoe);
+
   const changeImage = (kartinka)=>{
     setImage(kartinka);
+
   }
-  useEffect(()=>{
-    changeImage(image)
-  },[])
   return (
     <body>
       <div className='container'>
@@ -22,10 +21,10 @@ const Body = () => {
             <img src={image} alt="bigshoe" />
           </div>
           <div className="bottom">
-            <img onClick = {()=>changeImage(VeryBigShoe)} src={VeryBigShoe} alt="bigshoe" />
-            <img onClick = {()=>changeImage(LittleShoe1)} src={LittleShoe1} alt="lilshoe" />
-            <img onClick = {()=>changeImage(LittleShoe2)} src={LittleShoe2} alt="lilshoe" />
-            <img onClick = {()=>changeImage(LittleShoe3)}  src={LittleShoe3} alt="lilshoe" />
+            <img className = {image === VeryBigShoe?'buttonClicked':'buttonUnclicked'} onClick = {()=>changeImage(VeryBigShoe)} src={VeryBigShoe} alt="bigshoe" />
+            <img className = {image === LittleShoe1?'buttonClicked':'buttonUnclicked'} onClick = {()=>changeImage(LittleShoe1)} src={LittleShoe1} alt="lilshoe" />
+            <img className = {image === LittleShoe2?'buttonClicked':'buttonUnclicked'} onClick = {()=>changeImage(LittleShoe2)} src={LittleShoe2} alt="lilshoe" />
+            <img className = {image === LittleShoe3?'buttonClicked':'buttonUnclicked'} onClick = {()=>changeImage(LittleShoe3)}  src={LittleShoe3} alt="lilshoe" />
           </div>
         </span>
         

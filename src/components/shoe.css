@@ -79,8 +79,15 @@ body{
     margin-top: 1rem;
     width: 25rem;
 }
-.container .images .bottom img{
+.container .images .bottom .buttonUnclicked{
     border-radius: 1rem;
+    cursor: pointer;
+}
+.container .images .bottom .buttonClicked{
+    border-radius: 1rem;
+    cursor: pointer;
+    opacity: 65%;
+    border: 3px solid var(--Orange);
 }
 .container span .top img{
     width: 25rem;
