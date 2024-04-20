@@ -5,18 +5,22 @@ import LittleShoe2 from './images/image-product-3-thumbnail.jpg'
 import LittleShoe3 from './images/image-product-4-thumbnail.jpg'
 import VeryBigShoe from './images/image-product-1.jpg'
 import Buttons from './Buttons'
+import { useState } from 'react'
 const Body = () => {
-  
+  const [image,setImage] = useState(VeryBigShoe);
+  function changeImage(kartinka){
+    setImage(kartinka);
+  }
   return (
     <body>
       <div className='container'>
         <span className='images'>
           <div className="top">
-            <img src={VeryBigShoe} alt="bigshoe" />
+            <img src={image} alt="bigshoe" />
           </div>
           <div className="bottom">
-            <img src={BigShoe} alt="bigshoe" />
-            <img src={LittleShoe1} alt="lilshoe" />
+            <img onClick = {changeImage(BigShoe)} src={BigShoe} alt="bigshoe" />
+            <img onClick = {changeImage(LittleShoe1)} src={LittleShoe1} alt="lilshoe" />
             <img src={LittleShoe2} alt="lilshoe" />
             <img src={LittleShoe3} alt="lilshoe" />
           </div>

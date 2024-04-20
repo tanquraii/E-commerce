@@ -32,6 +32,15 @@ header{
     height: 5rem;
     border-bottom: 1px solid var(--Light-grayish-blue);
 }
+header .ava{
+    width: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img{
+    width: 3rem;
+}
 .catalog{
     display: flex;
     justify-content: space-between;
